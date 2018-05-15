@@ -1,0 +1,156 @@
+:root {
+  --offline-red: #f11010;
+  --online-green: #009102;
+  --signboard-black: #0000007a;
+  --tooltip-color: Linen;
+}
+
+html {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-image {
+  top: 0;
+  left: 0;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background: url("http://трикота.бел/wp-content/uploads/2017/11/fon-nebo-trava-27511.jpg")
+    no-repeat center bottom;
+  background-size: cover;
+  z-index: -3;
+}
+
+.page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+}
+
+.trunk {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  right: 50%;
+  width: 40px;
+  height: 800px;
+  bottom: 0;
+  background-color: #8c673a;
+  z-index: -2;
+  border-radius: 3px;
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5),
+    0px 2px 2px 0px rgba(255, 255, 255, 0.5) inset;
+}
+
+#arrowOnline {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0px 5px 0px;
+  right: 35px;
+  width: 175px;
+  height: 30px;
+  position: relative;
+  background: var(--online-green);
+  z-index: 1;
+}
+
+#arrowOnline:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 5px solid var(--online-green);
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+
+#arrowOnline:before {
+  content: "";
+  position: absolute;
+  right: -20px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: 20px solid var(--online-green);
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+
+#arrowOffline {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0px 5px 0px;
+  right: 110px;
+  width: 175px;
+  height: 30px;
+  position: relative;
+  background: var(--offline-red);
+  z-index: 1;
+}
+
+#arrowOffline:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-right: 5px solid transparent;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+
+#arrowOffline:before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-right: 20px solid var(--offline-red);
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+
+.trunk a:link,
+a:visited,
+a:hover,
+a:active {
+  color: white;
+  text-decoration: none;
+}
+
+.tooltip.right > .tooltip-arrow {
+  border-right-color: var(--tooltip-color);
+  padding-left: 17px;
+}
+
+.tooltip > .tooltip-inner {
+  background-color: var(--tooltip-color);
+  text-shadow: 0 1px 1px #000;
+  font-weight: normal;
+  font-size: fit-width;
+  font-family: "Merriweather Sans", sans-serif;
+  max-width: none;
+  color: Teal;
+  white-space: pre-wrap;
+}
+
+.tooltip.right {
+  padding-left: 22px;
+}
+
+#channel {
+  font-family: "Love Ya Like A Sister", cursive;
+  color: var(--signboard-black);
+  font-size: 1.5em;
+}
